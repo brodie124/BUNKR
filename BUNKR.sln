@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUNKR.Primary", "BUNKR.Primary\BUNKR.Primary.csproj", "{FAA1A3F4-FFFC-436D-BDEA-BB8397DE64A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUNKR.Secondary", "BUNKR.Secondary\BUNKR.Secondary.csproj", "{D6B65787-2666-4169-A79B-9E7AC20EC25F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUNKR.Domain", "BUNKR.Domain\BUNKR.Domain.csproj", "{16756640-D158-4E12-BAF8-2A9A7FF82D18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAA1A3F4-FFFC-436D-BDEA-BB8397DE64A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA1A3F4-FFFC-436D-BDEA-BB8397DE64A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA1A3F4-FFFC-436D-BDEA-BB8397DE64A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA1A3F4-FFFC-436D-BDEA-BB8397DE64A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B65787-2666-4169-A79B-9E7AC20EC25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B65787-2666-4169-A79B-9E7AC20EC25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B65787-2666-4169-A79B-9E7AC20EC25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B65787-2666-4169-A79B-9E7AC20EC25F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16756640-D158-4E12-BAF8-2A9A7FF82D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16756640-D158-4E12-BAF8-2A9A7FF82D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16756640-D158-4E12-BAF8-2A9A7FF82D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16756640-D158-4E12-BAF8-2A9A7FF82D18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
