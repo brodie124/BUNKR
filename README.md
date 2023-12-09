@@ -29,8 +29,8 @@ BUNKR aims to solve this by:
 
 BUNKR is split into two components, `BUNKR.Primary` and `BUNKR.Secondary`.
 
-`BUNKR.Primary` -> the brains of the operation, handles all SSL certificate management, communication with Let's Encrypt
+**BUNKR.Primary** -> the brains of the operation, handles all SSL certificate management, communication with Let's Encrypt
 and updating DNS entries where necessary.
 
-`BUNKR.Secondary` -> an agent running on each remote, responsible for forwarding any ACME HTTP-01 challenge requests, as well
+**BUNKR.Secondary** -> an agent running on each remote, responsible for forwarding any ACME HTTP-01 challenge requests, as well
 as receiving SSL certificates from the `BUNKR.Primary` and updating them as appropriate for the running HTTP web server.
