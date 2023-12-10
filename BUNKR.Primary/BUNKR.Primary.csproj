@@ -24,8 +24,4 @@
       <ProjectReference Include="..\BUNKR.Domain\BUNKR.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Repositories\" />
-    </ItemGroup>
-
 </Project>

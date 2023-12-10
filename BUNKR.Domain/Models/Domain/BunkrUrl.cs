@@ -1,5 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace BUNKR.Domain.Models.Domain;
 
+[Owned]
 public class BunkrUrl
 {
     public string Url { get; }
