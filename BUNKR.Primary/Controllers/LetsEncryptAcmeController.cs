@@ -19,27 +19,17 @@ public class LetsEncryptAcmeController : ControllerBase
         _logger = logger;
         _acmeChallengeService = acmeChallengeService;
     }
-    
+
     /// <summary>
-    /// Called when a secondary has an ACME HTTP-01 token to be used for proving.
+    /// Called when a Secondary receives a request from LetsEncrypt to prove an ACME HTTP-01 token.
     /// </summary>
-    [HttpPost("StartHttpChallenge/{urlSlug}/{*token}")]
-    public async Task StartHttpChallenge(
-        [FromRoute] string token, 
-        [FromRoute] string urlSlug,
-        [FromBody] StartLetsEncryptHttpAcmeChallengeRequestDto startChallengeRequest
+    [HttpPost("ProveHttpChallenge/{urlSlug}/{*token}")]
+    public async Task ProveHttpChallenge(
+        [FromRoute] string urlSlug, 
+        [FromRoute] string token
     )
     {
         // TODO: store the ACME challenge data somewhere
         _ = Task.Run(() => _acmeChallengeService.ExecuteChallenge().LogExceptions(_logger));
-    }
-
-    /// <summary>
-    /// Called when a secondary receives a request from LetsEncrypt to prove an ACME HTTP-01 token.
-    /// </summary>
-    [HttpGet("ProveHttpChallenge/{urlSlug}/{*token}")]
-    public async Task ProveHttpChallenge([FromRoute] string urlSlug, [FromRoute] string token)
-    {
-        
     }
 }
