@@ -9,27 +9,26 @@ public static class ServiceCollectionExtensions
     {
         return serviceCollection
                 .AddScoped<IManagedDomainsRepository, ManagedDomainsRepository>()
-                .AddScoped<IManagedDomainsRepository, ManagedDomainsRepository>()
+                .AddScoped<IManagedDomainsService, ManagedDomainsService>()
             ;
     }
-    
+
     public static IServiceCollection AddBunkrConfigurationOptions(
         this IServiceCollection serviceCollection,
         IConfiguration configuration
     )
     {
         return serviceCollection
-            .AddDatabaseConfigurationOptions(configuration)
+                .AddDatabaseConfigurationOptions(configuration)
             ;
     }
-    
+
 
     private static IServiceCollection AddDatabaseConfigurationOptions(
-        this IServiceCollection serviceCollection, 
+        this IServiceCollection serviceCollection,
         IConfiguration configuration
     )
     {
         return serviceCollection.Configure<DatabaseOptions>(configuration.GetSection(DatabaseOptions.SectionName));
     }
-
 }

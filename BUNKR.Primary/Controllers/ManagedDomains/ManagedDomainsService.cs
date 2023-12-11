@@ -3,7 +3,12 @@ using BUNKR.Domain.Models.Domain;
 
 namespace BUNKR.Primary.Controllers.ManagedDomains;
 
-public class ManagedDomainsService
+public interface IManagedDomainsService
+{
+    Task<ServiceResult<ManagedDomain>> AddAsync(ManagedDomain managedDomain);
+}
+
+public class ManagedDomainsService : IManagedDomainsService
 {
     private readonly IManagedDomainsRepository _managedDomainsRepository;
 
@@ -12,7 +17,7 @@ public class ManagedDomainsService
         _managedDomainsRepository = managedDomainsRepository;
     }
 
-    public async Task<ServiceResult<ManagedDomain>> Add(ManagedDomain managedDomain)
+    public async Task<ServiceResult<ManagedDomain>> AddAsync(ManagedDomain managedDomain)
     {
         var existingManagedDomain = await _managedDomainsRepository.FindByUrlSlugAsync(managedDomain.Url.UrlSlug);
         if(existingManagedDomain?.Id == managedDomain.Id)

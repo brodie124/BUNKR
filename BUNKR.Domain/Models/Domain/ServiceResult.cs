@@ -5,7 +5,7 @@ namespace BUNKR.Domain.Models.Domain;
 public class ServiceResult<T>
 {
     public static implicit operator ServiceResult<T>(T? data) => Success(data);
-    
+
     public required bool IsSuccess { get; init; }
     public T? Data { get; init; }
     public ErrorCode? ErrorCode { get; init; }

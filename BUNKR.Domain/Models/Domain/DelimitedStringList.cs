@@ -6,11 +6,11 @@ namespace BUNKR.Domain.Models.Domain;
 [Owned]
 public class DelimitedStringList
 {
-    private readonly string _delimiter;
+    private const string Delimiter = ";";
     private string? _value;
     private List<string> _cachedList = new();
 
-    public required string? Value
+    public string? Value
     {
         get => _value;
         set => UpdateValue(value);
@@ -19,13 +19,13 @@ public class DelimitedStringList
     [NotMapped] 
     public List<string> List => _cachedList;
 
-    public DelimitedStringList() : this(";")
+    public DelimitedStringList() : this(null)
     {
     }
 
-    public DelimitedStringList(string delimiter)
+    public DelimitedStringList(string? startingValue)
     {
-        _delimiter = delimiter;
+        Value = startingValue;
     }
 
     private void UpdateValue(string? value)
@@ -34,6 +34,6 @@ public class DelimitedStringList
             return;
         
         _value = value;
-        _cachedList = _value?.Split(_delimiter).ToList() ?? new List<string>();
+        _cachedList = _value?.Split(Delimiter).ToList() ?? new List<string>();
     }
 }
